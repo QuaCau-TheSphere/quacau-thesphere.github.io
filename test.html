@@ -1,0 +1,134 @@
+tesd
+<div id="viz"></div>
+<script type="javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="javascript" src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+<script type="javascript" src="https://unpkg.com/neovis.js@2.0.0-alpha.9"></script>
+<script type="javascript" src="https://unpkg.com/neo4j-driver"></script>
+
+<script>
+var viz;
+var allNodes;
+var highlightActive = false;
+
+function draw() {
+    var config = {
+        containerId: "viz",
+        initialCypher: "match (n)-[r]-(m) return n,r,m",
+        neo4j: {
+            serverUrl: 'bolt://b95e1176.databases.neo4j.io',
+            serverUser: 'neo4j',
+            serverPassword: 'jgqHo9s6c2fCRv_mT2l1S693dSQ0GKYYC0LZ5Rn7XI8',
+            driverConfig: { 
+                encrypted: "ENCRYPTION_ON",
+                trust: "TRUST_SYSTEM_CA_SIGNED_CERTIFICATES"
+            },
+        },
+        visConfig: {
+            edges: {
+                color: "dimgray",
+                selectionWidth: 7,
+            },
+            nodes: {
+                shape: "dot",
+                labelHighlightBold: true,
+                margin: 1000,
+                scaling: {
+                    min: 10,
+                    max: 30,
+                    label: {
+                        min: 8,
+                        max: 30,
+                        drawThreshold: 12,
+                        maxVisible: 20,
+                    },
+                },
+            },
+            interaction: {
+                hover: true,
+                hoverConnectedEdges: true,
+                multiselect: true,
+            },
+            manipulation: {
+                deleteNode: true,
+                deleteEdge: true,
+                initiallyActive: true,
+            },
+            configure: {
+                filter: "physics",
+            }  
+        },
+        labels: {
+            note: {
+                label: "wrappedname",
+                group: "group",
+                value: "degree_und",
+                // [NeoVis.NEOVIS_ADVANCED_CONFIG]: {
+                //     function: {
+                //         title: (props) => NeoVis.objectToTitleHtml(props, ["name", "group", "gid", "in", "out", "contr"])
+                //     },
+                //     static: {
+                //     }
+                // }
+            },
+        },
+        relationships: {
+            Mauthuanvoi: {
+                [NeoVis.NEOVIS_ADVANCED_CONFIG]: {
+                    cypher: {}, 
+                    function: { 
+                        // title: NeoVis.objectToTitleHtml,
+                    },
+                    static: {
+                        color: " #ff9999",
+                        title: "Mâu thuẫn",
+                        smooth: false,
+                        // physics: false
+                    }
+                }
+            },
+            
+            Chonen: {
+                [NeoVis.NEOVIS_ADVANCED_CONFIG]: {
+                    function: {
+                        title: NeoVis.objectToTitleHtml,
+                        // title: (props) => NeoVis.objectToTitleHtml(props, ["name", "group", "content"])
+                    },
+                    static: { 
+                        arrows: "to",
+                        title: "Cho nên",
+                    } 
+                }
+            },
+        },
+    }
+    
+    viz = new NeoVis.default(config)
+    viz.render();
+    console.log(viz);
+    // Your after render code here
+    viz.registerOnEvent("completed", () => {
+        network = viz.network
+        console.log('Visualization completed at '+ new Date().getHours() + ":" + new Date().getMinutes() ) 
+        // nodes = viz.nodes;
+        // nodesDataset = viz.nodes; 
+        // edgesDataset = viz.edges; 
+        // allNodes = nodesDataset.get({
+            //     returnType: "Object"
+            //     });
+            // network.on("click", neighbourhoodHighlight);
+
+        var status = document.getElementById("status")
+        network.on("stabilizationProgress", function () {
+            status.innerHTML = "Đang tải...";
+            status.setAttribute("style", "color: red"  );
+        })
+        network.once("stabilizationIterationsDone", function () {
+            status.innerHTML = "Đã tải xong";
+            status.setAttribute("style", "color: green"  ) ;
+        })
+
+    })
+}
+  
+
+</script>

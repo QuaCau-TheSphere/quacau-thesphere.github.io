@@ -1,0 +1,57 @@
+<html>
+  <header>
+    <!-- https://github.com/neo4j/neo4j-javascript-driver/blob/4.0/README.md -->
+    <script src="https://unpkg.com/neo4j-driver"></script>
+  </header>
+  <h1>Table</h1>
+  <table>
+    <thead>
+      <tr id="header"></tr>
+    </thead>
+    <tbody id="body"></tbody>
+  </table>
+  <script type="text/javascript">
+    let header = document.getElementById("header");
+    let body = document.getElementById("body");
+
+    example();
+
+    async function example() {
+      const driver = neo4j.driver(
+        "bolt://b95e1176.databases.neo4j.io",
+        neo4j.auth.basic("neo4j", "jgqHo9s6c2fCRv_mT2l1S693dSQ0GKYYC0LZ5Rn7XI8"), {    
+            encrypted: "ENCRYPTION_ON",
+            // trust: "TRUST_SYSTEM_CA_SIGNED_CERTIFICATES"
+        } 
+      );
+      const session = driver.session();
+      try {
+        const result = await session.run("MATCH (n) RETURN n.name");
+
+        // Assumes all nodes returned have the same properties as the first one returned.
+        Object.keys(result.records[0].get(0).properties).forEach((key) => {
+          let colHead = document.createElement("th");
+          let headerText = document.createTextNode(key);
+          colHead.appendChild(headerText);
+          header.appendChild(colHead);
+        });
+
+        // There are nicer ways to do this. This is just a hacked together example.
+        result.records.forEach((record) => {
+          let row = document.createElement("tr");
+          Object.values(record.get(0).properties).forEach((val) => {
+            let cell = document.createElement("td");
+            let text = document.createTextNode(val);
+            cell.appendChild(text);
+            row.appendChild(cell);
+          });
+          body.appendChild(row);
+        });
+      } finally {
+        await session.close();
+      }
+      await driver.close();
+    }
+  </script>
+</html>
+

@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="utf-8" http-equiv="encoding">
+
+<meta property="og:title" content="Một hệ thống niềm tin" />
+
+<title>Đồ thị mạng lưới 100 niềm tin phổ biến – Quả Cầu</title>
+<link rel="stylesheet" href="style.css">
+
+<script type="javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="javascript" src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+<script type="javascript" src="https://unpkg.com/neovis.js@2.0.0-alpha.9"></script>
+<script type="javascript" src="https://unpkg.com/neo4j-driver"></script>
+<script type="text/javascript" src="config.js"></script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MWZ4WG7');</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MWZ4WG7" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+</head>
+
+<body onload="draw()">
+    <div class="version">Phiên bản: 0.8 alpha | 15-Dec-21<br>
+    Thảo luận và báo lỗi trên <a href="https://discord.gg/EnVdUaf36h">Discord</a><br>
+    Trạng thái: <span id="status" style="color:red" >Chưa tải</span><br></div>
+<h3>Quả Cầu</h3>
+<h1>Đồ thị mạng lưới 100 niềm tin phổ biến</h1>
+Truy vấn Cypher <span style="color:gray"><a href="https://youtu.be/l76udM3wB4U?t=347" target="_blank">[?]</a></span> : <textarea cols=50 id="cyphersubmit"></textarea>
+<input type="submit" value="Vẽ" onclick=" drawCustomCypherString()">
+<label style="float: right;"><input id="nophysics" type="checkbox" onclick="togglePhysics()">Tắt chuyển động</label>
+<br>
+<label for="Nút" >Chọn loại niềm tin:</label>
+<select data-placeholder="Bỏ trống: chọn tất cả" multiple class="chosen-select" name="Chọn nút" id="Nút" >
+    <option value="Cx">Cảm xúc</option>
+    <option value="Kt">Kiến thức, ngôn ngữ, thông diễn</option>
+    <option value="Lq">Lạc quan, hy vọng, tin tưởng</option>
+    <option value="Nt">Nghệ thuật, văn hoá đại chúng, truyền thông</option>
+    <option value="Ql">Quy luật cuộc sống</option>
+    <option value="Tl">Tâm linh</option>
+    <option value="Tđ">Thay đổi thực tại</option>
+    <option value="Tt">Tự trị, can thiệp, hiểu về người khác</option>
+</select>
+hoặc những niềm tin lẻ (cách nhau bằng dấu phẩy): <input type="text" id="Nút lẻ">
+<div style="float: right;">
+    <input type="button" Value="Xuất ảnh" onclick="document.getElementById('canvasImg').click();">
+    <a id="canvasImg" download="Mạng lưới niềm tin"></a></div>
+<br>
+<label for="Cạnh">Chọn loại mối quan hệ:</label>
+<select data-placeholder="Bỏ trống: chọn tất cả" multiple class="chosen-select" name="Chọn cạnh" id="Cạnh" >
+    <option value="Chonen">Kéo theo</option>
+    <option value="Mauthuanvoi">Mâu thuẫn</option>
+    <option value="Tuongduongvoi">Tương đương</option>
+</select>
+<input type="submit" Value="Vẽ" onclick="drawFromDropDown() ">
+
+<div id="viz"></div>
+<!-- <div id="log">Log</div> -->
+
+<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet"/>
+<script>   
+    $(".chosen-select").chosen({
+        no_results_text: "Không tìm thấy kết quả",
+        search_contains: true
+    })
+    function drawCustomCypherString() {
+        cypherstring = document.getElementById('cyphersubmit').value
+
+        console.log(cypherstring)
+        viz.renderWithCypher(cypherstring)
+    }    
+    function drawFromDropDown() {
+        // sng = selected node group
+        // sin = selected individual nodes
+        // se = selected edges
+        sng = Array.from(document.getElementById("Nút").options).filter(option => option.selected).map(option => option.value); 
+        sin = document.getElementById('Nút lẻ').value 
+        se = Array.from(document.getElementById("Cạnh").options).filter(option => option.selected).map(option => option.value); 
+        
+        if (sng.length !== 0 || sin.length !== 0 || se.length !== 0 ) {
+            wherestring = "where "  
+            
+            if (sng.length !== 0) { 
+                sngstring = 'n.gid in ' + JSON.stringify(sng)
+            } else { sngstring = "" } 
+            
+            if (sin !== "") {
+                sinstring = 'id(n) in [' + sin + ']'
+            } else { sinstring = "" } 
+                        
+            if (sng.length !== 0 && sin !== "") { 
+                wherestring = wherestring.concat("(", sngstring, " or ", sinstring, ")")
+            } else { wherestring = wherestring.concat(sngstring, sinstring) }
+
+            if (se.length !== 0) { 
+                sestring = 'r.type in ' + JSON.stringify(se)
+                wherestring = wherestring.concat(" and ", sestring)
+            } else { sestring = "" } 
+        }
+        cypherstring = 'match (n)-[r]-() '+wherestring+' return n,r'
+        document.getElementById('cyphersubmit').value = cypherstring;
+        
+        console.log(cypherstring)
+        viz.renderWithCypher(cypherstring)
+    } 
+    function togglePhysics() {
+        var checkBox = document.getElementById("nophysics");
+        if (checkBox.checked == true){
+            viz.network.setOptions({physics :{enabled: false}})
+        } else {
+            viz.network.setOptions({physics :{enabled: true}})
+        }
+    }
+
+    window.onerror = function(msg, url, linenumber) {
+    alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
+    return true;
+    }
+</script>
+
+<h1>Table</h1>
+<table>
+    <thead>
+        <tr id="header"></tr>
+    </thead>
+    <tbody id="body"></tbody>
+</table>
+
+<div id="checkboxes">
+    <label>Todo list</label>
+    <ul>
+        <li><input type="checkbox"> <label ="">Đọc tài liệu</label></li>
+        <li><input type="checkbox"> Hiện/ẩn cạnh và nút</li>
+        <li><input type="checkbox"> Làm table</li>
+        <li><input type="checkbox"> Login</li>
+        <li><input type="checkbox"> Làm script streaming dữ liệu</li>
+        <li><input type="checkbox"> Làm hướng dẫn sử dụng</li>
+        <li><input type="checkbox"> Viết bài phân tích</li>
+        <li><input checked type="checkbox"> Báo lỗi</li>
+        <li><input checked type="checkbox"> Tải ảnh</li>
+        <li><input checked type="checkbox"> Chỉ vẽ cạnh mâu thuẫn</li>
+        <li><input checked type="checkbox"> Query nhiều phần</li>
+    </ul>
+</div>
+</body>
+</html>

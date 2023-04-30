@@ -1,0 +1,50 @@
+<th class="textbold">Grade</th>                                              
+<td>
+    <select name="grade1" class="form-control textbox required uace_grade">
+        <option value="">Grade</option>
+        <option value="6">A</option>
+    </select>
+</td>
+<td>
+    <select name="grade1" class="form-control textbox required uace_grade">
+        <option value="">Grade</option>
+        <option value="5">B</option>
+    </select>
+</td>
+<td>
+    <select name="grade1" class="form-control textbox required uace_grade">
+        <option value="">Grade</option>
+        <option value="4">C</option>
+    </select>
+</td>
+<td>
+    <select name="grade1" class="form-control textbox required uace_grade">
+        <option value="">Grade</option>
+        <option value="3">D</option>
+    </select>
+</td>
+<td>
+    <select name="grade1" class="form-control textbox required uace_grade">
+        <option value="">Grade</option>
+        <option value="2">E</option>
+    </select>
+</td>
+<td>
+    <select name="grade1" class="form-control textbox required uace_grade">
+        <option value="">Grade</option>
+        <option value="1">O</option>
+    </select>
+</td>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>
+    var myGrades = [];
+$('.uace_grade').each(function(){
+    $(this).change(function(){
+        var $option = $(this).find(':selected').val();
+        myGrades.push($option);
+    });
+    $('#result').html(myGrades);
+});
+
+</script>

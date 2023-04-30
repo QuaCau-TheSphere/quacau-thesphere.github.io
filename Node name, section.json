@@ -1,0 +1,686 @@
+﻿[
+  {
+    "n.name": "Ta chỉ có thể tác động khi họ muốn thay đổi",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Sự tự quyết của một người là bất khả xâm phạm",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Sự can thiệp là luôn không tôn trọng quyền tự quyết",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Nothing about us without us",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Những người ở bên cạnh mình lúc khó khăn mới là những người bạn thực sự của mình",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Người ngoài không có tư cách thay họ",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Người hiểu rõ ta nhất chỉ có ta mà thôi",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Một người chỉ thay đổi một khi bản thân họ đã sẵn sàng tiếp nhận",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Miễn điều mình làm không gây ảnh hưởng đến người khác là được",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Không thể nào biết hết được người khác",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Không thể chiều lòng tất cả mọi người được",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Không phải việc của mình thì đừng có xía vào",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Giúp người gặp khó khăn ngay cả khi họ không nhờ đến mình",
+    "n.section": [
+      "Tự trị, can thiệp, hiểu về người khác"
+    ]
+  },
+  {
+    "n.name": "Tự nhiên sẽ làm công việc của nó",
+    "n.section": [
+      "Tâm linh",
+      "Tự nhiên"
+    ]
+  },
+  {
+    "n.name": "Tự nhiên sẽ cân bằng mọi thứ",
+    "n.section": [
+      "Tâm linh",
+      "Tự nhiên"
+    ]
+  },
+  {
+    "n.name": "Mọi thứ đều là sự sắp đặt của số phận",
+    "n.section": [
+      "Tâm linh",
+      "Tự nhiên"
+    ]
+  },
+  {
+    "n.name": "Hãy hòa mình vào tự nhiên",
+    "n.section": [
+      "Tâm linh",
+      "Tự nhiên"
+    ]
+  },
+  {
+    "n.name": "Dùng lý trí là can thiệp thô bạo vào tự nhiên",
+    "n.section": [
+      "Tâm linh",
+      "Tự nhiên"
+    ]
+  },
+  {
+    "n.name": "Cái gì tự nhiên thì sẽ tốt nhất",
+    "n.section": [
+      "Tâm linh",
+      "Tự nhiên"
+    ]
+  },
+  {
+    "n.name": "Đúng với sai là một",
+    "n.section": [
+      "Tâm linh",
+      "Logic"
+    ]
+  },
+  {
+    "n.name": "Sử dụng lý luận thì là đang hý luận",
+    "n.section": [
+      "Tâm linh",
+      "Logic"
+    ]
+  },
+  {
+    "n.name": "Nếu đã giác ngộ thì sẽ biết hết tất cả",
+    "n.section": [
+      "Tâm linh",
+      "Logic"
+    ]
+  },
+  {
+    "n.name": "Không có gì là đúng, không có gì là sai",
+    "n.section": [
+      "Tâm linh",
+      "Logic"
+    ]
+  },
+  {
+    "n.name": "Khoa học không bao giờ tới được tâm linh",
+    "n.section": [
+      "Tâm linh",
+      "Logic"
+    ]
+  },
+  {
+    "n.name": "Dùng logic là nhị nguyên",
+    "n.section": [
+      "Tâm linh",
+      "Logic"
+    ]
+  },
+  {
+    "n.name": "Linh hồn có tồn tại",
+    "n.section": [
+      "Tâm linh"
+    ]
+  },
+  {
+    "n.name": "Kiếp sau có tồn tại",
+    "n.section": [
+      "Tâm linh"
+    ]
+  },
+  {
+    "n.name": "Hãy sống trong hiện tại",
+    "n.section": [
+      "Tâm linh"
+    ]
+  },
+  {
+    "n.name": "Cuộc đời ở kiếp này là vậy",
+    "n.section": [
+      "Tâm linh"
+    ]
+  },
+  {
+    "n.name": "Chúa có tồn tại",
+    "n.section": [
+      "Tâm linh"
+    ]
+  },
+  {
+    "n.name": "“Named must your fear be before banish it you can” – Yoda",
+    "n.section": [
+      "Thay đổi thực tại"
+    ]
+  },
+  {
+    "n.name": "Đừng làm mọi chuyện tệ hơn",
+    "n.section": [
+      "Thay đổi thực tại"
+    ]
+  },
+  {
+    "n.name": "Để đến lúc nhận ra hậu quả thì đã trễ rồi",
+    "n.section": [
+      "Thay đổi thực tại"
+    ]
+  },
+  {
+    "n.name": "Sự sẵn sàng chỉ đến khi ta dấn thân, chứ không phải đến từ việc đợi nó đến",
+    "n.section": [
+      "Thay đổi thực tại"
+    ]
+  },
+  {
+    "n.name": "Số phận là do ta quyết định",
+    "n.section": [
+      "Thay đổi thực tại"
+    ]
+  },
+  {
+    "n.name": "Phải làm vì những người khác, vì thế hệ sau",
+    "n.section": [
+      "Thay đổi thực tại"
+    ]
+  },
+  {
+    "n.name": "Phải hành động trước khi quá muộn",
+    "n.section": [
+      "Thay đổi thực tại"
+    ]
+  },
+  {
+    "n.name": "Nếu không ta thì ai. Nếu không phải bây giờ thì bao giờ",
+    "n.section": [
+      "Thay đổi thực tại"
+    ]
+  },
+  {
+    "n.name": "Nếu cảm thấy thoải mái thì mọi chuyện vẫn đang tốt đẹp",
+    "n.section": [
+      "Thay đổi thực tại"
+    ]
+  },
+  {
+    "n.name": "Lùi một bước để tiến ba bước",
+    "n.section": [
+      "Thay đổi thực tại"
+    ]
+  },
+  {
+    "n.name": "Nếu luật không công bằng đổi với tôi thì tôi không có nghĩa vụ tuân thủ",
+    "n.section": [
+      "Thay đổi thực tại",
+      "Luật pháp - nhân quyền"
+    ]
+  },
+  {
+    "n.name": "Luật là để bảo vệ công bằng, công lý",
+    "n.section": [
+      "Thay đổi thực tại",
+      "Luật pháp - nhân quyền"
+    ]
+  },
+  {
+    "n.name": "Luật cần phải công bằng, nếu cái gì không công bằng thì không phải là luật",
+    "n.section": [
+      "Thay đổi thực tại",
+      "Luật pháp - nhân quyền"
+    ]
+  },
+  {
+    "n.name": "Dũng cảm nói không với cái sai, nói không với điều phi lý",
+    "n.section": [
+      "Thay đổi thực tại"
+    ]
+  },
+  {
+    "n.name": "Đừng cầu toàn",
+    "n.section": [
+      "Quy luật cuộc sống"
+    ]
+  },
+  {
+    "n.name": "Việt Nam là thế rồi",
+    "n.section": [
+      "Quy luật cuộc sống",
+      "Xã hội"
+    ]
+  },
+  {
+    "n.name": "Tư bản kiểm soát người yếu thế",
+    "n.section": [
+      "Quy luật cuộc sống",
+      "Xã hội"
+    ]
+  },
+  {
+    "n.name": "Sẽ luôn có người làm hại mình",
+    "n.section": [
+      "Quy luật cuộc sống",
+      "Xã hội"
+    ]
+  },
+  {
+    "n.name": "Người đang có quyền lực thì sẽ không bao giờ từ bỏ",
+    "n.section": [
+      "Quy luật cuộc sống",
+      "Xã hội"
+    ]
+  },
+  {
+    "n.name": "Mọi người chỉ chạy theo đám đông",
+    "n.section": [
+      "Quy luật cuộc sống",
+      "Xã hội"
+    ]
+  },
+  {
+    "n.name": "Chính phủ kiểm soát người dân",
+    "n.section": [
+      "Quy luật cuộc sống",
+      "Xã hội"
+    ]
+  },
+  {
+    "n.name": "Tương lai không đoán trước được",
+    "n.section": [
+      "Quy luật cuộc sống"
+    ]
+  },
+  {
+    "n.name": "Thứ bỏ đi thì không đáng tốn thời gian để tìm hiểu nó kỹ hơn",
+    "n.section": [
+      "Quy luật cuộc sống"
+    ]
+  },
+  {
+    "n.name": "Thật vô ích để thay đổi",
+    "n.section": [
+      "Quy luật cuộc sống"
+    ]
+  },
+  {
+    "n.name": "Sinh ra là như thế",
+    "n.section": [
+      "Quy luật cuộc sống"
+    ]
+  },
+  {
+    "n.name": "Phải tránh mọi rủi ro",
+    "n.section": [
+      "Quy luật cuộc sống"
+    ]
+  },
+  {
+    "n.name": "Nếu không thấy hợp lý thì không đáng lắng nghe",
+    "n.section": [
+      "Quy luật cuộc sống"
+    ]
+  },
+  {
+    "n.name": "Mọi thứ chỉ là sự phù hợp",
+    "n.section": [
+      "Quy luật cuộc sống"
+    ]
+  },
+  {
+    "n.name": "Không có gì là sai nếu lo cho bản thân trước",
+    "n.section": [
+      "Quy luật cuộc sống"
+    ]
+  },
+  {
+    "n.name": "Nếu có kẽ hở thì sẽ có người khai thác",
+    "n.section": [
+      "Quy luật cuộc sống",
+      "Bản chất con người"
+    ]
+  },
+  {
+    "n.name": "Não chúng ta luôn tự đánh lừa chính mình",
+    "n.section": [
+      "Quy luật cuộc sống",
+      "Bản chất con người"
+    ]
+  },
+  {
+    "n.name": "Con người có tính xã hội cao",
+    "n.section": [
+      "Quy luật cuộc sống",
+      "Bản chất con người"
+    ]
+  },
+  {
+    "n.name": "Cuộc đời sẽ dạy họ một bài học",
+    "n.section": [
+      "Quy luật cuộc sống"
+    ]
+  },
+  {
+    "n.name": "Chỉ có thể chờ một sự kiện bên ngoài tác động để họ tự nhận ra",
+    "n.section": [
+      "Quy luật cuộc sống"
+    ]
+  },
+  {
+    "n.name": "Việc theo đuổi cái đẹp kể cả khi nó mâu thuẫn với cái đúng và cái tốt là chuyện đương nhiên",
+    "n.section": [
+      "Nghệ thuật, văn hoá đại chúng, truyền thông"
+    ]
+  },
+  {
+    "n.name": "Thật vô nghĩa khi trách những người theo đuổi cái đẹp là chẳng làm được việc gì",
+    "n.section": [
+      "Nghệ thuật, văn hoá đại chúng, truyền thông"
+    ]
+  },
+  {
+    "n.name": "Sản phẩm văn hoá đại chúng gây ảnh hưởng tới người xem",
+    "n.section": [
+      "Nghệ thuật, văn hoá đại chúng, truyền thông"
+    ]
+  },
+  {
+    "n.name": "Sản phẩm nghệ thuật dù bạo lực, gợi dục thì cũng không gây hại",
+    "n.section": [
+      "Nghệ thuật, văn hoá đại chúng, truyền thông"
+    ]
+  },
+  {
+    "n.name": "Cái đẹp thì không kích thích sự ham muốn",
+    "n.section": [
+      "Nghệ thuật, văn hoá đại chúng, truyền thông"
+    ]
+  },
+  {
+    "n.name": "Cái đẹp là thứ trong mắt người nhìn",
+    "n.section": [
+      "Nghệ thuật, văn hoá đại chúng, truyền thông"
+    ]
+  },
+  {
+    "n.name": "Cái đẹp chỉ là thứ vô dụng",
+    "n.section": [
+      "Nghệ thuật, văn hoá đại chúng, truyền thông"
+    ]
+  },
+  {
+    "n.name": "Thật ngây thơ khi tin rằng sự tích cực sẽ đến",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Nếu việc quan tâm đến bản thân gây đau khổ cho người khác thì cũng không cần phải áy náy",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Mọi chuyện rồi nhất định sẽ ổn thôi",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Không lo lắng về sự phản bội có thể sẽ xảy ra",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Hãy đặt niềm tin vào người khác",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Hãy tin tưởng vào khả năng chuyển hóa, ứng biến của người khác",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Hãy nuôi dưỡng sự tò mò",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Hãy nuôi dưỡng sự hy vọng",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Hãy mở rộng bản thân với những điều mới mẻ",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Hãy hướng đến mặt trăng. Nếu trượt, bạn cũng có thể vươn đến được một vì sao - Clement Stone",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Hãy cứ kiên trì làm, rồi thành công sẽ đến",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Hãy chịu đau lúc này, rồi sau đó sẽ trái ngọt",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Hãy chấp nhận rủi ro",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Cánh cửa này đóng lại thì cánh cửa khác sẽ mở ra",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Chỉ cần làm những gì mình có thể làm",
+    "n.section": [
+      "Lạc quan, hy vọng, tin tưởng"
+    ]
+  },
+  {
+    "n.name": "Đừng nói những điều xa vời, không thực tế",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Tri thức là sức mạnh",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Thay vì nói lý thuyết thì tốt nhất là nên bắt tay vào thực hành",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Nếu không hiểu được thì có giải thích cũng như không",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Nếu hiểu được thì sẽ tự hiểu, không cần phải giải thích",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Nếu có thể linh hoạt thì ta có thể đối phó với rủi ro một cách đơn giản",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Nếu bạn không thể giải thích được cho một đứa trẻ hiểu thì là bạn chưa hiểu đủ",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Ngôn ngữ không bao giờ có thể diễn tả hết được",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Mỗi người có cách diễn giải khác nhau",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Không để cảm xúc chi phối bản thân",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Hãy phản tư",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Hãy không ngừng chất vấn những quan niệm của mình",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Hãy dám biết",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Cảm xúc sẽ bóp méo thực tại",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Chín người mười ý",
+    "n.section": [
+      "Kiến thức, ngôn ngữ, thông diễn"
+    ]
+  },
+  {
+    "n.name": "Đã hết yêu thì không bao giờ có thể yêu lại lần nữa",
+    "n.section": [
+      "Cảm xúc"
+    ]
+  },
+  {
+    "n.name": "Sự yêu thích thì không có lý do",
+    "n.section": [
+      "Cảm xúc"
+    ]
+  },
+  {
+    "n.name": "Sự buồn đau là một phần của cuộc sống",
+    "n.section": [
+      "Cảm xúc"
+    ]
+  },
+  {
+    "n.name": "Một lần là trăm năm",
+    "n.section": [
+      "Cảm xúc"
+    ]
+  },
+  {
+    "n.name": "Cảm xúc tiêu cực báo hiệu sự không ổn đối với bản thân",
+    "n.section": [
+      "Cảm xúc"
+    ]
+  },
+  {
+    "n.name": "Cảm xúc thì không thể ép theo logic được",
+    "n.section": [
+      "Cảm xúc"
+    ]
+  },
+  {
+    "n.name": "Cảm thấy mình nhạy cảm hoặc có năng lực đặc biệt",
+    "n.section": [
+      "Cảm xúc"
+    ]
+  },
+  {
+    "n.name": "Cái cốt yếu thì không thể dùng mắt để thấy được, mà phải dùng tim để cảm nhận",
+    "n.section": [
+      "Cảm xúc"
+    ]
+  },
+  {
+    "n.name": "Chỉ có cảm xúc là đúng nhất",
+    "n.section": [
+      "Cảm xúc"
+    ]
+  }
+]
